@@ -1,0 +1,115 @@
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero .container,
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .hero-content,
+    .about-text,
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    
+    .timeline:before {
+        left: 40px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content:after,
+    .timeline-item:nth-child(even) .timeline-content:after {
+        left: auto;
+        right: -10px;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent var(--light-color);
+    }
+    
+    .timeline-item:after {
+        left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-content h2 {
+        font-size: 20px;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--white-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transition: all 0.3s ease;
+    }
+    
+    nav ul.active {
+        left: 0;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    
+    .hero-content h2 {
+        font-size: 18px;
+    }
+    
+    .skills {
+        flex-direction: column;
+    }
+    
+    .certificates-grid,
+    .workshops-grid {
+        grid-template-columns: 1fr;
+    }
+}
